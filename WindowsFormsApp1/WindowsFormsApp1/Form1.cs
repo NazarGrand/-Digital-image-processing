@@ -26,13 +26,10 @@ namespace Digital_image_processing
 
             btnSelectImage.TextAlign = ContentAlignment.MiddleCenter;
 
-            comboBox.Items.Add("Негативне зображення");
-            comboBox.Items.Add("Метод Оцу");
-            comboBox.Items.Add("Алгоритм Флойда-Стейнберга");
-            comboBox.Items.Add("Розмивання зображення");
-            comboBox.Items.Add("Збільшення чіткості зображення");
-            comboBox.Items.Add("Тиснення зображення");
-            comboBox.Items.Add("Медіанний фільтр");
+            string[] methodNames = MethodNames.AllMethodNames();
+
+            foreach(string method in methodNames)
+            comboBox.Items.Add(method);
         }
 
         private void btnSelectImage_Click(object sender, EventArgs e)

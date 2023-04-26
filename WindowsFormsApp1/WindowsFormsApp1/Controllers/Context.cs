@@ -28,50 +28,52 @@ namespace Digital_image_processing
         {
             switch (_methodName)
             {
-                case "Негативне зображення":
+                case MethodNames.NegativeImageName:
                     {
                         _processingImage = new NegativeImage(_image);
                         break;
                     }
 
-                case "Метод Оцу":
+                case MethodNames.OtsusMethodName:
                     {
                         _processingImage = new OtsusMethod(_image);
                         break;
                     }
 
-                case "Алгоритм Флойда-Стейнберга":
+                case MethodNames.FloydSteinbergAlgorithmName:
                     {
                         _processingImage = new FloydSteinbergAlgorithm(_image);
                         break;
                     }
 
-                case "Розмивання зображення":
+                case MethodNames.BlurringName:
                     {
                         _processingImage = new Blurring(_image);
                         break;
                     }
 
-                case "Збільшення чіткості зображення":
+                case MethodNames.IncreasingClarityName:
                     {
                         _processingImage = new IncreasingClarity(_image);
                         break;
                     }
 
-                case "Тиснення зображення":
+                case MethodNames.StampingName:
                     {
                         _processingImage = new Stamping(_image);
                         break;
                     }
 
-                case "Медіанний фільтр":
+                case MethodNames.MedianFilterName:
                     {
                         _processingImage = new MedianFilter(_image);
                         break;
                     }
                 case "":
-                    MessageBox.Show("Ви не обрали алгоритм обробки зображення!");
-                    break;
+                    {
+                        MessageBox.Show("Ви не обрали алгоритм обробки зображення!");
+                        break;
+                    }
             }
         }
     }
